@@ -10,6 +10,22 @@ export default function List() {
         fetchPatients() 
     },[])
 
+
+    const getInputValue = (event)=>{
+        
+        const userValue = event.target.value;
+
+            const article = { title: userValue };
+          
+
+            axios.post(`http://localhost:8000/api/postSearch`,article).then(({data})=>{
+                setPatient(data.data)
+                // console.log(data);
+            })
+
+            console.log(patients);
+        }
+
     const fetchPatients = async () => {
         await axios.get(`http://localhost:8000/api/patientInfo`).then(({data})=>{
             setPatient(data.data)
@@ -20,7 +36,8 @@ export default function List() {
        
       <div className="container">
           <div className="row">
-            <div className='col-12'>
+          <div className='col-12'>
+            <input type="text" onChange={getInputValue} placeholder="Search here"/>
             </div>
             <div className="col-12">
                 <div className="card card-body">
