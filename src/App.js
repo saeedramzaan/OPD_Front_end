@@ -9,6 +9,7 @@ import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom"
 
 
 import PatientList from "./components/page/list.component";
+import Create from "./components/page/create.component";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Col md={12}>
           <Routes>
             <Route exact path='/' element={<PatientList />} />
+            <Route exact path='/create' element={<Create />} />
           </Routes>
         </Col>
       </Row>
