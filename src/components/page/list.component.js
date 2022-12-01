@@ -45,7 +45,7 @@ export default function List() {
 
                     <Col>
                         <Link className='btn btn-primary mb-2 float-end' to={"/create"}>
-                            Create Product
+                            Create Appointment
                         </Link>
                     </Col>
                 </div>
