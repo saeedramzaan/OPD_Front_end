@@ -140,7 +140,7 @@ export default function CreateProduct() {
                   </Row>
 
                   <Button variant="primary" className="mt-2" size="lg" block="block" type="submit">
-                    Add Appointment
+                    Add
                   </Button>
                 </Form>
 
